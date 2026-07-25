@@ -29,7 +29,7 @@ const calculerTVA = (prixHT, taux) => {
   // formule: prixTTC = PrixHT + TVA, TVA = PrixHT *
   verifieType(prixHT, "number");
   verifieType(taux, "number");
-  return prixHT * (1 * taux);
+  return prixHT * (1 + taux);
 };
 
 const inverserChaine = (texte) => {
@@ -115,7 +115,6 @@ const verifieType = (variable, typeAttendu) => {
  *   fonctions
  *
  * ===============================================*/
-
 
 afficher(`
 <h3 id="estPair1">Demo estPair:</h3>
