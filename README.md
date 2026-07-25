@@ -6,6 +6,8 @@ projet de fonctions utiles en JS avec une page html pour la documentation. un pr
 
 <img src="img.png" alt="image capture d'ecran du projet">
 [Live Demo](https://yggdrasil2024.github.io/proje73-utils-js/)
+
+
 # Fonctionnalités: 
 ## estPair
 Fonction qui vérifie si le nombre donné est pair. il renvoi vrais si c'est le cas et false sinon. fais un usage simple de l'operateur modulo.
