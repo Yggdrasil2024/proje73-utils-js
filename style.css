@@ -97,6 +97,12 @@ main {
   margin-bottom: 24px;
 }
 
+.fonction-name {
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
 pre {
   background-color: var(--texte);
   padding: none;
@@ -109,6 +115,14 @@ code {
   color: white;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
 /* demo */
 .test {
   border-left: 4px solid var(--vert);
@@ -128,6 +142,32 @@ div[id="sortie"] h3:target {
 .result {
   font-weight: 600;
   color: var(--vert);
+}
+
+.tag {
+  font-size: 16px;
+  font-weight: 500;
+  background-color: gray;
+  padding: 0.3rem;
+  border-radius: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rouge {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+.vert {
+  color: var(--vert);
+  background-color: rgba(16, 185, 129, 0.2);
+}
+
+.orange {
+  color: #ffa500;
+  background-color: rgba(255, 165, 0, 0.2);
 }
 
 @media (min-width: 768px) {
