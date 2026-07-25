@@ -80,26 +80,137 @@
             </ul>
         </aside>
         <section class="doc">
+            <h2 class="label">Liste des fonctions</h2>
             <article class="function-doc">
-                <h2 class="fonction-name">Nom <span class="tag">tag</span></h2>
-                <p class="fonction-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem cum ullam quis
-                    quia amet culpa assumenda dicta a aperiam vitae voluptate iure eveniet, in nesciunt, beatae soluta
-                    eligendi libero deserunt!</p>
+                <h2 id="estPair" class="fonction-name">estPair <span class="tag">tag</span></h2>
+                <p class="fonction-desc">Fonction qui verifie si le nombre donné est pair. il renvoi vrais si c'est le
+                    cas et false sinon</p>
 
                 <h3>exemples d'utilisation</h3>
-                <pre><code>// Signature : estPair(n: number) -> boolean
-console.log(estPair(4));
-console.log(estPair(7));
-console.log(estPair(0));</code></pre>
-                <!-- <div class="function-demo">
-                    <p>fuction(<span>parm</span>)resultat</p>
-                </div>
-            -->
+                <pre><code>console.log(estPair(4)); //attendu: true
+console.log(estPair(7)); //attendu: false
+console.log(estPair(0));//attendu: false</code></pre>
                 <h3 class="demo">Demo</h3>
-                <a href="" class="demo-link">Lien vers la demo.</a>
+                <a href="#estPair1" class="demo-link">Lien vers la demo.</a>
             </article>
 
             <article class="function-doc">
+                <h2 id="maxDeDeux" class="fonction-name">maxDeDeux <span class="tag">tag</span></h2>
+                <p class="fonction-desc">fonction qui va compare deux nombres renvoie le plus grand des deux.</p>
+
+                <h3>exemples d'utilisation</h3>
+                <pre><code>console.log(maxDeDeux(10, 5)); // 10
+console.log(maxDeDeux(-3, 8)); // 8
+console.log(maxDeDeux(4, 4));  // 4</code></pre>
+                <h3 class="demo">Demo</h3>
+                <a href="#maxDeDeux1" class="demo-link">Lien vers la demo.</a>
+            </article>
+
+            <article class="function-doc">
+                <h2 id="convertirTemperature" class="fonction-name">convertirTemperature <span class="tag">tag</span>
+                </h2>
+                <p class="fonction-desc">fonction qui permet qui prend en entrée la temperature en degré celcius et
+                    renvoie un resultat en degré Fahrenheit</p>
+
+                <h3>exemples d'utilisation</h3>
+                <pre><code>console.log(convertirTemperature(0));   // 32
+console.log(convertirTemperature(25));  // 77
+console.log(convertirTemperature(-10)); // 14</code></pre>
+                <h3 class="demo">Demo</h3>
+                <a href="#convertirTemperature1" class="demo-link">Lien vers la demo.</a>
+            </article>
+
+            <article class="function-doc">
+                <h2 id="calculerTVA" class="fonction-name">calculerTVA <span class="tag">tag</span></h2>
+                <p class="fonction-desc">Fonction permettant de derterminer le prixTTC en prenant en entrée le prix hors
+                    taxes et le taux de tva</p>
+
+                <h3>exemples d'utilisation</h3>
+                <pre><code>console.log(calculerTVA(100, 0.20));  // 120
+console.log(calculerTVA(50, 0.055));  // 52.75
+console.log(calculerTVA(200, 0));     // 200</code></pre>
+                <h3 class="demo">Demo</h3>
+                <a href="#calculerTVA1" class="demo-link">Lien vers la demo.</a>
+            </article>
+
+            <article class="function-doc">
+                <h2 id="inverserChaine" class="fonction-name">inverserChaine <span class="tag">tag</span></h2>
+                <p class="fonction-desc">Fonction qui prend une chaine de caractère en entré et renvoie son invere.</p>
+
+                <h3>exemples d'utilisation</h3>
+                <pre><code>console.log(inverserChaine("bonjour"));    // "ruojnob"
+console.log(inverserChaine("javascript")); // "tpircsavaj"
+console.log(inverserChaine(123));          // Erreur</code></pre>
+                <h3 class="demo">Demo</h3>
+                <a href="#inversererChaine1" class="demo-link">Lien vers la demo.</a>
+            </article>
+
+            <article class="function-doc">
+                <h2 id="compterVoyelles" class="fonction-name">compterVoyelles <span class="tag">tag</span></h2>
+                <p class="fonction-desc">fonction qui prend une chaine de caractère en entrée et renvoie le nombre de
+                    voyelles presentes dan la chaine.</p>
+
+                <h3>exemples d'utilisation</h3>
+                <pre><code>console.log(compterVoyelles("hello"));  // 2
+console.log(compterVoyelles("akieni")); // 4
+console.log(compterVoyelles("str"));    // 0</code></pre>
+                <h3 class="demo">Demo</h3>
+                <a href="#compteVoyelles1" class="demo-link">Lien vers la demo.</a>
+            </article>
+
+            <article class="function-doc">
+                <h2 id="estPalindrome" class="fonction-name">estPalindrome<span class="tag">tag</span></h2>
+                <p class="fonction-desc">fonction qui prend en entrée une chaine de caractère et verifie que cette
+                    chaine est oui non un palindrome.</p>
+
+                <h3>exemples d'utilisation</h3>
+                <pre><code>console.log(estPalindrome("kayak")); // true
+console.log(estPalindrome("hello")); // false
+console.log(estPalindrome("Radar")); // true</code></pre>
+                <h3 class="demo">Demo</h3>
+                <a href="#estPalindrome1" class="demo-link">Lien vers la demo.</a>
+            </article>
+
+            <article class="function-doc">
+                <h2 id="factorielle" class="fonction-name">factorielle <span class="tag">tag</span></h2>
+                <p class="fonction-desc">fonction calculant le factorielle d'un entier qu'elle prend en entrée.</p>
+
+                <h3>exemples d'utilisation</h3>
+                <pre><code>console.log(factorielle(5)); // 120
+console.log(factorielle(0)); // 1
+console.log(factorielle(1)); // 1</code></pre>
+                <h3 class="demo">Demo</h3>
+                <a href="#factorielle1" class="demo-link">Lien vers la demo.</a>
+            </article>
+
+            <article class="function-doc">
+                <h2 id="genereMotDePasse" class="fonction-name">genereMotDePasse<span class="tag">tag</span></h2>
+                <p class="fonction-desc">fonction qui permet de generer un mot de passe en lui specifiant la taille du
+                    dit mot de passe</p>
+
+                <h3>exemples d'utilisation</h3>
+                <pre><code>console.log(genereMotDePasse(8));  // ex: "k8#mP1!z"
+console.log(genereMotDePasse(12)); // ex: "A9#xL!2mQ8@p"
+console.log(genereMotDePasse(16)); // ex: "zR5@kL8#pQ1!mW9$"</code></pre>
+                <h3 class="demo">Demo</h3>
+                <a href="#generateMotDePasse1" class="demo-link">Lien vers la demo.</a>
+            </article>
+
+            <article class="function-doc">
+                <h2 class="fonction-name">verifieType <span class="tag">tag</span></h2>
+                <p class="fonction-desc">Fonction qui permet de verifier qu'un nombre est bien d'un certain type dont on
+                    a besion.</p>
+
+                <h3>exemples d'utilisation</h3>
+                <pre><code>console.log(verifieType("texte", "string")); // undefined (Valide)
+console.log(verifieType(42, "number"));      // undefined (Valide)
+console.log(verifieType("texte", "number")); // "Erreur: vous avez rentrer texte un type number etait attendu"</code></pre>
+                <h3 class="demo">Demo</h3>
+                <a href="#verifieType1" class="demo-link">Lien vers la demo.</a>
+            </article>
+
+            <article class="function-doc">
+                <h2>Demonstration des differentes fonctions</h2>
                 <div id="sortie">
                     <!-- c' est ici que le js ecrit -->
                 </div>

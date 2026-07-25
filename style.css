@@ -32,7 +32,8 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-header {
+header,
+footer {
   background-color: var(--texte);
   border-radius: var(--rayon);
   color: var(--carte);
@@ -44,12 +45,17 @@ main {
   grid-template-columns: 300px 1fr;
   gap: 24px;
   width: 100%;
-  height: 100vh;
+  height: fit-content;
   padding-top: 1rem;
+  position: relative;
+}
+
+.doc {
+  grid-column: span 2;
 }
 
 .sommaire {
-  grid-column: span 1;
+  grid-column: span 2;
   border-radius: var(--rayon);
   /* padding: 1.5rem;*/
   background: var(--carte);
@@ -58,8 +64,7 @@ main {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   padding: 1.2rem;
   height: fit-content;
-  position: sticky;
-  top: 1rem;
+  position: static;
 }
 
 .sommary-menu {
@@ -104,14 +109,45 @@ code {
   color: white;
 }
 
+/* demo */
+.test {
+  border-left: 4px solid var(--vert);
+  margin-bottom: 16px;
+  padding: 1rem;
+  background-color: rgba(16, 185, 129, 0.2);
+}
+
+div[id="sortie"] h3:target {
+  color: var(--rouge);
+}
+
+.label {
+  margin-bottom: 24px;
+}
+
+.result {
+  font-weight: 600;
+  color: var(--vert);
+}
+
 @media (min-width: 768px) {
   body {
     padding: 1rem 2rem 0;
   }
 
   main,
-  header {
+  header,
+  footer {
     max-width: 1200px;
     margin-inline: auto;
+  }
+
+  .doc {
+    grid-column: span 1;
+  }
+  .sommaire {
+    grid-column: span 1;
+    position: sticky;
+    top: 1rem;
   }
 }

@@ -96,7 +96,7 @@ const genereMotDePasse = (taille) => {
 
   for (let i = 0; i < taille; i++) {
     //on recupere un index aleatoire dans l'intervalle de 0 à taille
-    let index = Math.floor(Math.random() * taille);
+    let index = Math.floor(Math.random() * alphaChars.length);
     motDePasse += alphaChars[index];
   }
 
@@ -106,7 +106,8 @@ const genereMotDePasse = (taille) => {
 const verifieType = (variable, typeAttendu) => {
   //verifies si une variable est bien du type attendu
   if (typeof variable !== typeAttendu)
-    return `Erreur: vous avez rentrer ${variable} un type ${typeAttendu} etait attendu`;
+    return `Erreur: vous avez rentrer "${variable}" un type "${typeAttendu}" etait attendu`;
+  else return `Valid: c'est bien une valeur de type "${typeAttendu}"`;
 };
 
 /* ===============================================
@@ -114,86 +115,76 @@ const verifieType = (variable, typeAttendu) => {
  *   fonctions
  *
  * ===============================================*/
-/*
-console.log(estPair(4));
-console.log(estPair(7));
-console.log(estPair(0));
 
-console.log(maxDeDeux(10, 5));
-console.log(maxDeDeux(-3, 8));
-console.log(maxDeDeux(4, 4));
-
-console.log(convertirTemperature(0));
-console.log(convertirTemperature(25));
-console.log(convertirTemperature(-10));
-
-console.log(calculerTVA(100, 0.2));
-console.log(calculerTVA(50, 0.055));
-console.log(calculerTVA(200, 0));
-
-console.log(inverserChaine("bonjour"));
-console.log(inverserChaine("javascript"));
-console.log(inverserChaine(123));
-
-console.log(compterVoyelles("hello"));
-console.log(compterVoyelles("akieni"));
-console.log(compterVoyelles("str"));
-
-console.log(estPalindrome("kayak"));
-console.log(estPalindrome("hello"));
-console.log(estPalindrome("Radar"));
-
-console.log(factorielle(5));
-console.log(factorielle(0));
-console.log(factorielle(1));
-
-console.log(genereMotDePasse(8));
-console.log(genereMotDePasse(12));
-console.log(genereMotDePasse(16));
-
-console.log(verifieType("texte", "string"));
-console.log(verifieType(42, "number"));
-console.log(verifieType("texte", "number"));
-*/
 
 afficher(`
-<p>estPair(4) : ${estPair(4)}</p>
-<p>estPair(7) : ${estPair(7)}</p>
-<p>estPair(0) : ${estPair(0)}</p>
-<br><br>
-<p>maxDeDeux(10, 5) : ${maxDeDeux(10, 5)}</p>
-<p>maxDeDeux(-3, 8) : ${maxDeDeux(-3, 8)}</p>
-<p>maxDeDeux(4, 4) : ${maxDeDeux(4, 4)}</p>
-<br><br>
-<p>convertirTemperature(0) : ${convertirTemperature(0)}</p>
-<p>convertirTemperature(25) : ${convertirTemperature(25)}</p>
-<p>convertirTemperature(-10) : ${convertirTemperature(-10)}</p>
-<br><br>
-<p>calculerTVA(100, 0.20) : ${calculerTVA(100, 0.2)}</p>
-<p>calculerTVA(50, 0.055) : ${calculerTVA(50, 0.055)}</p>
-<p>calculerTVA(200, 0) : ${calculerTVA(200, 0)}</p>
-<br><br>
-<p>inverserChaine("bonjour") : ${inverserChaine("bonjour")}</p>
-<p>inverserChaine("javascript") : ${inverserChaine("javascript")}</p>
-<p>inverserChaine(123) : ${inverserChaine(123)}</p>
-<br><br>
-<p>compterVoyelles("hello") : ${compterVoyelles("hello")}</p>
-<p>compterVoyelles("akieni") : ${compterVoyelles("akieni")}</p>
-<p>compterVoyelles("str") : ${compterVoyelles("str")}</p>
-<br><br>
-<p>estPalindrome("kayak") : ${estPalindrome("kayak")}</p>
-<p>estPalindrome("hello") : ${estPalindrome("hello")}</p>
-<p>estPalindrome("Radar") : ${estPalindrome("Radar")}</p>
-<br><br>
-<p>factorielle(5) : ${factorielle(5)}</p>
-<p>factorielle(0) : ${factorielle(0)}</p>
-<p>factorielle(1) : ${factorielle(1)}</p>
-<br><br>
-<p>genereMotDePasse(8) : ${genereMotDePasse(8)}</p>
-<p>genereMotDePasse(12) : ${genereMotDePasse(12)}</p>
-<p>genereMotDePasse(16) : ${genereMotDePasse(16)}</p>
-<br><br>
-<p>verifieType("texte", "string") : ${verifieType("texte", "string")}</p>
-<p>verifieType(42, "number") : ${verifieType(42, "number")}</p>
-<p>verifieType("texte", "number") : ${verifieType("texte", "number")}</p>
+<h3 id="estPair1">Demo estPair:</h3>
+<div class="test">
+  <p>estPair(4) : <span class="result">${estPair(4)}</span></p>
+  <p>estPair(7) : <span class="result">${estPair(7)}</span></p>
+  <p>estPair(0) : <span class="result">${estPair(0)}</span></p>
+</div>
+
+<h3 id="maxDeDeux1">Demo maxDeDeux:</h3>
+<div class="test">
+  <p>maxDeDeux(10, 5) : <span class="result">${maxDeDeux(10, 5)}</span></p>
+  <p>maxDeDeux(-3, 8) : <span class="result">${maxDeDeux(-3, 8)}</span></p>
+  <p>maxDeDeux(4, 4) : <span class="result">${maxDeDeux(4, 4)}</span></p>
+</div>
+
+<h3 id="convertirTemperature1">Demo convertirTemperature:</h3>
+<div class="test">
+  <p>convertirTemperature(0) : <span class="result">${convertirTemperature(0)}</span></p>
+  <p>convertirTemperature(25) : <span class="result">${convertirTemperature(25)}</span></p>
+  <p>convertirTemperature(-10) : <span class="result">${convertirTemperature(-10)}</span></p>
+</div>
+
+<h3 id="calculerTVA1">Demo calculerTVA:</h3>
+<div class="test">
+  <p>calculerTVA(100, 0.20) : <span class="result">${calculerTVA(100, 0.2)}</span></p>
+  <p>calculerTVA(50, 0.055) : <span class="result">${calculerTVA(50, 0.055)}</span></p>
+  <p>calculerTVA(200, 0) : <span class="result">${calculerTVA(200, 0)}</span></p>
+</div>
+
+<h3 id="inverserChaine1">Demo inverserChaine:</h3>
+<div class="test">
+  <p>inverserChaine("bonjour") : <span class="result">${inverserChaine("bonjour")}</span></p>
+  <p>inverserChaine("javascript") : <span class="result">${inverserChaine("javascript")}</span></p>
+  <p>inverserChaine(123) : <span class="result">${inverserChaine(123)}</span></p>
+</div>
+
+<h3 id="compterVoyelles1">Demo compterVoyelles:</h3>
+<div class="test">
+  <p>compterVoyelles("hello") : <span class="result">${compterVoyelles("hello")}</span></p>
+  <p>compterVoyelles("akieni") : <span class="result">${compterVoyelles("akieni")}</span></p>
+  <p>compterVoyelles("str") : <span class="result">${compterVoyelles("str")}</span></p>
+</div>
+
+<h3 id="estPalindrome1">Demo estPalindrome:</h3>
+<div class="test">
+  <p>estPalindrome("kayak") : <span class="result">${estPalindrome("kayak")}</span></p>
+  <p>estPalindrome("hello") : <span class="result">${estPalindrome("hello")}</span></p>
+  <p>estPalindrome("Radar") : <span class="result">${estPalindrome("Radar")}</span></p>
+</div>
+
+<h3 id="factorielle1">Demo factorielle:</h3>
+<div class="test">
+  <p>factorielle(5) : <span class="result">${factorielle(5)}</span></p>
+  <p>factorielle(0) : <span class="result">${factorielle(0)}</span></p>
+  <p>factorielle(1) : <span class="result">${factorielle(1)}</span></p>
+</div>
+
+<h3 id="genereMotDePasse1">Demo genereMotDePasse:</h3>
+<div class="test">
+  <p>genereMotDePasse(8) : <span class="result">${genereMotDePasse(8)}</span></p>
+  <p>genereMotDePasse(12) : <span class="result">${genereMotDePasse(12)}</span></p>
+  <p>genereMotDePasse(16) : <span class="result">${genereMotDePasse(16)}</span></p>
+</div>
+
+<h3 id="verifieType1">Demo verifieType:</h3>
+<div class="test">
+  <p>verifieType("texte", "string") : <span class="result">${verifieType("texte", "string")}</span></p>
+  <p>verifieType(42, "number") : <span class="result">${verifieType(42, "number")}</span></p>
+  <p>verifieType("texte", "number") : <span class="result">${verifieType("texte", "number")}</span></p>
+</div>
 `);
