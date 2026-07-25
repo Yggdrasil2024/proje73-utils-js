@@ -114,3 +114,42 @@ const verifieType = (variable, typeAttendu) => {
  *
  * ===============================================*/
 
+console.log(estPair(4));
+console.log(estPair(7));
+console.log(estPair(0));
+
+console.log(maxDeDeux(10, 5));
+console.log(maxDeDeux(-3, 8));
+console.log(maxDeDeux(4, 4));
+
+console.log(convertirTemperature(0));
+console.log(convertirTemperature(25));
+console.log(convertirTemperature(-10));
+
+console.log(calculerTVA(100, 0.2));
+console.log(calculerTVA(50, 0.055));
+console.log(calculerTVA(200, 0));
+
+console.log(inverserChaine("bonjour"));
+console.log(inverserChaine("javascript"));
+console.log(inverserChaine(123));
+
+console.log(compterVoyelles("hello"));
+console.log(compterVoyelles("akieni"));
+console.log(compterVoyelles("str"));
+
+console.log(estPalindrome("kayak"));
+console.log(estPalindrome("hello"));
+console.log(estPalindrome("Radar"));
+
+console.log(factorielle(5));
+console.log(factorielle(0));
+console.log(factorielle(1));
+
+console.log(genereMotDePasse(8));
+console.log(genereMotDePasse(12));
+console.log(genereMotDePasse(16));
+
+console.log(verifieType("texte", "string"));
+console.log(verifieType(42, "number"));
+console.log(verifieType("texte", "number"));
