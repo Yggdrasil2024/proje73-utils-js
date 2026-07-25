@@ -27,7 +27,8 @@ const convertirTemperature = (c) => {
 const calculerTVA = (prixHT, taux) => {
   //on determine prix toutes taxes comprises
   // formule: prixTTC = PrixHT + TVA, TVA = PrixHT *
-  verifieType(texte, "number");
+  verifieType(prixHT, "number");
+  verifieType(taux, "number");
   return prixHT * (1 * taux);
 };
 
@@ -48,7 +49,7 @@ const compterVoyelles = (texte) => {
 
   verifieType(texte, "string");
 
-  for (i = 0; i < texte.length(); i++) {
+  for (i = 0; i < texte.length; i++) {
     //si chaque lettres du textes est une voyelle
     if (voyelles.includes(texte[i])) {
       nbreVoyelles++;
@@ -93,9 +94,9 @@ const genereMotDePasse = (taille) => {
 
   verifieType(taille, "number");
 
-  for (i = 0; i < taille; i++) {
+  for (let i = 0; i < taille; i++) {
     //on recupere un index aleatoire dans l'intervalle de 0 à taille
-    index = Math.floor(Math.random * taille);
+    let index = Math.floor(Math.random() * taille);
     motDePasse += alphaChars[index];
   }
 
@@ -113,7 +114,7 @@ const verifieType = (variable, typeAttendu) => {
  *   fonctions
  *
  * ===============================================*/
-
+/*
 console.log(estPair(4));
 console.log(estPair(7));
 console.log(estPair(0));
@@ -153,3 +154,46 @@ console.log(genereMotDePasse(16));
 console.log(verifieType("texte", "string"));
 console.log(verifieType(42, "number"));
 console.log(verifieType("texte", "number"));
+*/
+
+afficher(`
+<p>estPair(4) : ${estPair(4)}</p>
+<p>estPair(7) : ${estPair(7)}</p>
+<p>estPair(0) : ${estPair(0)}</p>
+<br><br>
+<p>maxDeDeux(10, 5) : ${maxDeDeux(10, 5)}</p>
+<p>maxDeDeux(-3, 8) : ${maxDeDeux(-3, 8)}</p>
+<p>maxDeDeux(4, 4) : ${maxDeDeux(4, 4)}</p>
+<br><br>
+<p>convertirTemperature(0) : ${convertirTemperature(0)}</p>
+<p>convertirTemperature(25) : ${convertirTemperature(25)}</p>
+<p>convertirTemperature(-10) : ${convertirTemperature(-10)}</p>
+<br><br>
+<p>calculerTVA(100, 0.20) : ${calculerTVA(100, 0.2)}</p>
+<p>calculerTVA(50, 0.055) : ${calculerTVA(50, 0.055)}</p>
+<p>calculerTVA(200, 0) : ${calculerTVA(200, 0)}</p>
+<br><br>
+<p>inverserChaine("bonjour") : ${inverserChaine("bonjour")}</p>
+<p>inverserChaine("javascript") : ${inverserChaine("javascript")}</p>
+<p>inverserChaine(123) : ${inverserChaine(123)}</p>
+<br><br>
+<p>compterVoyelles("hello") : ${compterVoyelles("hello")}</p>
+<p>compterVoyelles("akieni") : ${compterVoyelles("akieni")}</p>
+<p>compterVoyelles("str") : ${compterVoyelles("str")}</p>
+<br><br>
+<p>estPalindrome("kayak") : ${estPalindrome("kayak")}</p>
+<p>estPalindrome("hello") : ${estPalindrome("hello")}</p>
+<p>estPalindrome("Radar") : ${estPalindrome("Radar")}</p>
+<br><br>
+<p>factorielle(5) : ${factorielle(5)}</p>
+<p>factorielle(0) : ${factorielle(0)}</p>
+<p>factorielle(1) : ${factorielle(1)}</p>
+<br><br>
+<p>genereMotDePasse(8) : ${genereMotDePasse(8)}</p>
+<p>genereMotDePasse(12) : ${genereMotDePasse(12)}</p>
+<p>genereMotDePasse(16) : ${genereMotDePasse(16)}</p>
+<br><br>
+<p>verifieType("texte", "string") : ${verifieType("texte", "string")}</p>
+<p>verifieType(42, "number") : ${verifieType(42, "number")}</p>
+<p>verifieType("texte", "number") : ${verifieType("texte", "number")}</p>
+`);
