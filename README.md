@@ -59,7 +59,9 @@ a besion.
 ```txt
 root/
 ├── index.html          # Page d'accueil (Hero, Présentation, Valeurs)
-├── style.css           # Feuille de style globale (Mobile & Desktop)
+├── style.css          # Feuille de style globale (Mobile & Desktop)
+├── README.md         # documentation pour le projet
+├── img.png       #image pour la partie demo du README.md
 └── utils.js              # Script por la logique en javascript
 ```
 
