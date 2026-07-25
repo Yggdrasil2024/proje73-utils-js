@@ -1,29 +1,116 @@
 :root {
- --vert: #10b981;
- --rouge: #ef4444;
- --texte: #1f2937;
- --texte-clair: #6b7280;
- --fond: #f9fafb;
- --carte: #ffffff;
- --rayon: 12px;
- --espace: 1rem;
+  --vert: #10b981;
+  --rouge: #ef4444;
+  --texte: #1f2937;
+  --texte-clair: #6b7280;
+  --fond: #f9fafb;
+  --carte: #ffffff;
+  --rayon: 12px;
+  --espace: 1rem;
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
- font-family: system-ui, -apple-system, sans-serif;
- line-height: 1.6;
- color: var(--texte);
- background: var(--fond);
- padding: var(--espace);
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  line-height: 1.6;
+  color: var(--texte);
+  background: var(--fond);
+  padding: var(--espace);
 }
 .carte {
- background: var(--carte);
- border-radius: var(--rayon);
- padding: 1.5rem;
- max-width: 640px;
- margin: 0 auto;
- box-shadow: 0 1px 3px rgba(0,0,0,.1);
+  background: var(--carte);
+  border-radius: var(--rayon);
+  padding: 1.5rem;
+  max-width: 640px;
+  margin: 0 auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
+
+header {
+  background-color: var(--texte);
+  border-radius: var(--rayon);
+  color: var(--carte);
+  padding: 1.2rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 24px;
+  width: 100%;
+  height: 100vh;
+  padding-top: 1rem;
+}
+
+.sommaire {
+  grid-column: span 1;
+  border-radius: var(--rayon);
+  /* padding: 1.5rem;*/
+  background: var(--carte);
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.2rem;
+  height: fit-content;
+  position: sticky;
+  top: 1rem;
+}
+
+.sommary-menu {
+  list-style: none;
+}
+
+.sommary-menu-item {
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.sommary-menu-link {
+  text-decoration: none;
+  color: var(--texte-clair);
+}
+
+.sommary-menu-link:hover {
+  text-decoration: underline;
+  color: var(--texte);
+}
+
+.function-doc {
+  background: var(--carte);
+  border-radius: var(--rayon);
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+pre {
+  background-color: var(--texte);
+  padding: none;
+  padding: 1.2rem;
+  border-radius: var(--rayon);
+  font-family: monospace;
+}
+
+code {
+  color: white;
+}
+
 @media (min-width: 768px) {
- body { padding: 2rem; }
+  body {
+    padding: 1rem 2rem 0;
+  }
+
+  main,
+  header {
+    max-width: 1200px;
+    margin-inline: auto;
+  }
 }
